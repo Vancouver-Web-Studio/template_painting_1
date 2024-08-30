@@ -1,6 +1,7 @@
 local_backend: true
 backend:
   name: git-gateway
+  repo: Vancouver-Web-Studio/template_painting_1
   branch: master
   # proxy: http://localhost:8081/api/v1
 
