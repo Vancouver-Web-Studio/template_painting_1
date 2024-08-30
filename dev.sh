@@ -17,7 +17,7 @@ kill_descendant_processes() {
 
 for script in "${SCRIPTS[@]}"; do
 
-    echo $SCRIPTS_DIR/$script | entr -s "yarn --silent browserify $SCRIPTS_DIR/$script 2>&1 | yarn --silent uglifyjs - --mangle --rename --compress --mangle-props > $SCRIPTS_DIR/build/$script"
+    echo $SCRIPTS_DIR/$script | entr -s "yarn --silent browserify $SCRIPTS_DIR/$script 2>&1 | yarn --silent uglifyjs - --mangle --rename --compress --mangle-props > $SCRIPTS_DIR/build/$script" &
 done
 
 trap kill_descendant_processes SIGINT

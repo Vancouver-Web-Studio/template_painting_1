@@ -1,5 +1,4 @@
-const CMS = require("decap-cms-app");
 
-CMS.init();
-CMS.registerPreviewStyle("/css/preview.css");
+window.CMS.init();
+window.CMS.registerPreviewStyle("/css/preview.css");
 
