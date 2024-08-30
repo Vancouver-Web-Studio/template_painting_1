@@ -1,0 +1,132 @@
+
+@import "base.scss";
+@import "nav.scss";
+@import "footer.scss";
+
+.cta {
+  background-color: black;
+  position: relative;
+  color: white;
+}
+
+.cta-img {
+  width: 100%;
+  height: 60vw;
+  opacity: 0.5;
+}
+
+.cta-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 1rem;
+  h1 {
+    color: white;
+  }
+}
+
+.what-we-do {
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h2 {
+    text-align: center;
+  }
+  div {
+    text-align: center;
+  }
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5% 2% 5%;
+  .service-card-row {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1vw;
+    row-gap: 2vw;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .service-card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+    max-width: 300px;
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+  .service-card-txt {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+  }
+  .service-card-btn {
+    text-align: center;
+  }
+}
+
+.achievement {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 5% 5% 2% 5%;
+  justify-content: space-around;
+  .achievement-title {
+    text-align: center;
+  }
+  .achievement-description {
+    text-align: center;
+  }
+}
+
+.description {
+  background-image: url("assets/description-bg.svg");
+  background-size: cover;
+  padding: 5%;
+  display: flex;
+  flex-direction: row;
+  column-gap: 3rem;
+  justify-content: center;
+  .description-left {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    width: 70%;
+  }
+
+  img {
+    height: 100%;
+    border: 10px solid $secondary_color;
+    max-height: 1000px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .description {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    .description-left {
+      max-width: none;
+      width: 100%;
+    }
+    img {
+      display: none;
+    }
+  }
+}

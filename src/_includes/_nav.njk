@@ -1,0 +1,25 @@
+<nav class="navbar">
+  <div class="brand-title">Brand Name</div>
+  <div>
+    <a href="#" class="toggle-button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+  </div>
+  <div class="navbar-links">
+    <ul>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      {%- for page in collections.pages -%}
+        <li>
+          <a href="{{ page.url }}">{{ page.data.title }}</a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+  <div class="cta-nav">
+    <a href="#" class="btn">Get a Quote</a>
+  </div>
+</nav>
