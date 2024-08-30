@@ -8,8 +8,11 @@
   </head>
   <body>
     <!-- Include the script that builds the page and powers Decap CMS -->
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-    <script src="/scripts/build/admin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      window.CMS.init();
+      window.CMS.registerPreviewStyle("/css/preview.css");
+    </script>
 
   </body>
 </html>
