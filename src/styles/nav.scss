@@ -4,7 +4,8 @@
   display: flex;
   position: fixed;
   top: 0;
-  justify-content: center;
+  @include responsive-lr-padding($width, $min-margin);
+  justify-content: space-between;
   column-gap: 5vw;
   align-items: center;
   background-color: rgba($color: $secondary_color, $alpha: 0.9);
@@ -67,7 +68,9 @@
 }
 
 
-
+.toggle-button-container {
+  display: none;
+}
 
 .toggle-button {
   position: absolute;
@@ -105,7 +108,10 @@
   animation: dropdown 1s;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1150px) {
+  .toggle-button-container {
+    display: initial                                                                      ;
+  }
   .toggle-button {
     display: flex;
   }
@@ -121,6 +127,7 @@
     justify-content: center;
     align-items: flex-start;
     position: relative;
+
   }
   .navbar-links ul {
     flex-direction: column;

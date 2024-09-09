@@ -1,18 +1,20 @@
+@import "cards.scss";
 @import "base.scss";
 .body {
-    min-height: 20vh;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    row-gap: 1rem;
-    column-gap: 1rem;
+    @include cards($width / 3, 3, 1rem);
+    // min-height: 20vh;
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // row-gap: 1rem;
+    // column-gap: 1rem;
 }
 
 .blog-card {
-    min-width: 400px;
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
+    max-width: calc(($width - 2 * 1rem) / 3 );
     // border: 1px solid gray;
     border-radius: 10px;
     padding: 2%;
@@ -20,9 +22,7 @@
 }
 
 .blog-thumbnail {
-    img {
-        max-width: 100%;
-    }
+
 }
 
 .blog-text {

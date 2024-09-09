@@ -3,23 +3,21 @@ title: About Us
 layout: layouts/interior.njk
 css: about.css
 ---
-
 <div class="body">
-    <div class="body-left">
-        <img src="/assets/about.jpg" class="slide-left animate"/>
-
-    </div>
-    <div class="body-right">
-        <div class="topper-left">
-            {{ topper }}
-        </div>
-        <div class="body-content">
-        {{ content | safe}}
-        </div>
-        <div>
-            <a href="#" class="btn">Get Started Today</a>
-        </div>
-    </div>
+ <div class="body-left">
+  <img class="slide-left animate" src="/assets/about.webp"/>
+ </div>
+ <div class="body-right">
+  <div class="topper-left">
+   {{ topper }}
+  </div>
+  <div class="body-content">
+   {{ content | safe}}
+  </div>
+  <div>
+   <a class="btn" href="#">
+    Get Started Today
+   </a>
+  </div>
+ </div>
 </div>
-
-

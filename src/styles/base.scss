@@ -25,7 +25,7 @@ h1 {
   @include linear-font-size-clamp(375px, $width + $min_margin, 30pt, 50pt);
 }
 h2 {
-  @include linear-font-size-clamp(375px, $width + $min_margin, 25pt, 40pt);
+  @include linear-font-size-clamp(375px, $width + $min_margin, 20pt, 40pt);
 }
 h3 {
   @include linear-font-size-clamp(375px, $width + $min_margin, 20pt, 30pt);
@@ -35,6 +35,12 @@ h4 {
 }
 h5 {
   @include linear-font-size-clamp(375px, $width + $min_margin, 12pt, 15pt);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .btn {

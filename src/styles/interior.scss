@@ -1,13 +1,17 @@
+@import "base.scss";
 .interior-body {
     // min-height: 100vh;
+    @include responsive-lr-margin($width, $min-margin);
+    margin-top: 5rem;
+    margin-bottom: 5rem;
     z-index: 2;
     position: relative;
     background-color: white;
-    padding: 5% 10% 5% 10%;
   }
   .interior-header {
     position: relative;
     background-color: black;
+    overflow: hidden;
     max-height: 33vh;
     .interior-header-title {
       position: absolute;
@@ -22,14 +26,16 @@
       }
   
     }
-  
     .interior-img {
       z-index: 0;
-      object-fit: contain;
+      // object-fit: cover;
       opacity: 0.5;
+      object-fit: cover;;
+      margin: auto;
       width: 100%;
-      margin-top: -20vmin;
-      // margin-bottom: -2vmin;
+      margin-top: -10%;
+      // margin-bottom: -100px;
+      height: 100%;
       overflow: hidden;
     }
   }
