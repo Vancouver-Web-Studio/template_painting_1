@@ -2,29 +2,48 @@
 * {
   margin: 0;
   padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: "Roboto";
   font-size: min(15pt, 3vw);
 }
 
-body {
-  font-size: clamp(15pt, 3vw, 18pt);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: clamp(30pt, 2.2889842632vw - 8.5836909871px + 30pt, 50pt);
 }
 
 h2 {
-  font-size: 4vmax;
+  font-size: clamp(25pt, 1.7167381974vw - 6.4377682403px + 25pt, 40pt);
 }
 
 h3 {
-  font-size: 2.5rem;
+  font-size: clamp(20pt, 1.1444921316vw - 4.2918454936px + 20pt, 30pt);
 }
 
 h4 {
-  font-size: 1.2rem;
+  font-size: clamp(15pt, 0.5722460658vw - 2.1459227468px + 15pt, 20pt);
+}
+
+h5 {
+  font-size: clamp(12pt, 0.3433476395vw - 1.2875536481px + 12pt, 15pt);
 }
 
 .btn {

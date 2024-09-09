@@ -1,4 +1,10 @@
+@import "core.scss";
+
 @import "variables.scss";
+
+$min-width: 375px;
+$width: 1500px;
+$min-margin: 40px;
 
 * {
   margin: 0;
@@ -7,24 +13,28 @@
   font-family: "Roboto";
   font-size: min(15pt, 3vw);
 }
-body {
-  font-size: clamp(15pt, 3vw, 18pt);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
 }
-
 h1 {
-  font-size: 4rem;
+  @include linear-font-size-clamp(375px, $width + $min_margin, 30pt, 50pt);
 }
-
 h2 {
-  font-size: 4vmax;
+  @include linear-font-size-clamp(375px, $width + $min_margin, 25pt, 40pt);
 }
-
 h3 {
-  font-size: 2.5rem;
+  @include linear-font-size-clamp(375px, $width + $min_margin, 20pt, 30pt);
 }
-
 h4 {
-  font-size: 1.2rem;
+  @include linear-font-size-clamp(375px, $width + $min_margin, 15pt, 20pt);
+}
+h5 {
+  @include linear-font-size-clamp(375px, $width + $min_margin, 12pt, 15pt);
 }
 
 .btn {

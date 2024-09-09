@@ -3,7 +3,6 @@ layout: layouts/blog.njk
 tags: blog
 title: Hello From Above
 thumbnail:
-  - /uploads/code.png
   - /uploads/323.jpg
 date: 2024-08-26T03:06:00.000Z
 ---

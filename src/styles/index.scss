@@ -1,5 +1,5 @@
-
 @import "base.scss";
+@import "cards.scss";
 @import "nav.scss";
 @import "footer.scss";
 
@@ -31,7 +31,8 @@
 }
 
 .what-we-do {
-  padding: 5%;
+  
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,28 +45,32 @@
 }
 
 .services {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 5% 2% 5%;
-  .service-card-row {
-    display: flex;
-    flex-direction: row;
-    column-gap: 1vw;
-    row-gap: 2vw;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
+  @include responsive-lr-margin($width, $min-margin);
+  @include cards-total-width($width, 4, 1rem);
+  margin-top: 2.5rem;
   .service-card {
     display: flex;
     flex-direction: column;
     row-gap: 2vh;
-    max-width: 300px;
+    cursor: pointer;
+    padding: 1rem;
+    transition: ease-in-out 0.25s;
+    &:hover {
+      box-shadow: 0 0 10px gray;
+    }
+    &:hover img {
+      opacity: 0.5;
+      transform: scale(1.1);
+    }
+    .service-card-img-container {
+      background-color: black;
+      overflow: hidden;
+    }
 
     img {
       display: block;
       max-width: 100%;
+      transition: ease-in-out 0.25s;
     }
   }
   .service-card-txt {
@@ -73,17 +78,18 @@
     flex-direction: column;
     row-gap: 1vh;
   }
-  .service-card-btn {
-    text-align: center;
-  }
 }
 
 .achievement {
+  @include responsive-lr-margin($width, $min-margin);
+
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 5% 5% 2% 5%;
-  justify-content: space-around;
+  margin-top: 5rem;
+  justify-content: space-between;
+  row-gap: 1rem;
+  column-gap: 1rem;
   .achievement-title {
     text-align: center;
   }
@@ -95,38 +101,73 @@
 .description {
   background-image: url("assets/description-bg.svg");
   background-size: cover;
-  padding: 5%;
-  display: flex;
-  flex-direction: row;
-  column-gap: 3rem;
-  justify-content: center;
+  @include responsive-lr-margin($width, $min-margin);
+
+  @include right-profile(65ch, 2rem);
   .description-left {
-    max-width: 800px;
     display: flex;
     flex-direction: column;
-    row-gap: 1rem;
-    width: 70%;
+    row-gap: 2rem;
   }
-
+  margin-top: 5rem;
   img {
-    height: 100%;
-    border: 10px solid $secondary_color;
-    max-height: 1000px;
+    max-width: 500px;
+    width: 100%;
   }
 }
 
-@media (max-width: 1200px) {
-  .description {
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    .description-left {
-      max-width: none;
-      width: 100%;
+
+.about-icons-containers {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  .about-icon-card {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+    max-width: 80%;
+    .about-icon-container {
+      --icon-size: 50px;
+
+      background-color: lighten($primary_color, $amount: 35%) ;
+      border-radius: 99px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: var(--icon-size);
+      width: var(--icon-size);
+      padding: 40px;
+      i {
+        font-size: 25pt;
+        color: lighten($primary_color, 5%)
+
+      }
     }
-    img {
-      display: none;
+
+    .about-icon-text {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+      .about-icon-title {
+        font-weight: bold;
+        @include linear-font-size-clamp($min-width, $width + $min_margin, 14pt, 18pt)
+      }
     }
   }
 }
+
+// @media (max-width: 1200px) {
+//   .description {
+//     flex-direction: column;
+//     justify-content: center;
+//     text-align: center;
+//     width: 100%;
+//     .description-left {
+//       max-width: none;
+//       width: 100%;
+//     }
+//     img {
+//       display: none;
+//     }
+//   }
+// }

@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "sass": "sass --watch src/styles:src/css",
+    "sass": "sass --watch src/styles:src/css -I ../../stylelib",
     "cms": "decap-server",
     "site": "eleventy --serve",
     "build": "eleventy"
