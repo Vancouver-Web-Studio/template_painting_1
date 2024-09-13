@@ -40,8 +40,10 @@
   color: white;
   padding: 1.5rem;
   display: block;
-  font-size: 18pt;
+  font-size: 12pt;
   font-weight: bold;
+  transition: ease-in-out 0.25s;
+  white-space: nowrap;
 }
 .dropdown {
   position: relative;
@@ -53,8 +55,9 @@
   padding-right: 10px;
 }
 
-.dropdown:hover ul, .dropdown:active {
+.dropdown:hover ul, .dropdown:active ul, .dropdown:focus ul {
   display: block;
+  animation: dropdown 1s;
 }
 
 .dropdown ul {
@@ -64,7 +67,8 @@
   backdrop-filter: blur(10px);
   left: 0;
   top: 70px;
-  width: 100%;
+  width: max-content;
+  border-bottom: 5px solid $primary_color;
 }
 
 
@@ -93,13 +97,14 @@
 
 @keyframes dropdown {
   from {
-    opacity: 0;
+    // opacity: 0;
     max-height: 0;
   }
 
   to {
-    opacity: 1;
+    // opacity: 1;
     max-height: 500px;
+    
   }
 }
 

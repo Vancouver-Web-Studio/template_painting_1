@@ -11,8 +11,18 @@ img {
 * {
   margin: 0;
   padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-size: min(15pt, 3vw);
 }
 
@@ -22,27 +32,27 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 400;
+  font-weight: 900;
 }
 
 h1 {
-  font-size: clamp(30pt, 2.2889842632vw - 8.5836909871px + 30pt, 50pt);
+  font-size: clamp(20pt, 4.6242774566vw - 17.3410404624px + 20pt, 50pt);
 }
 
 h2 {
-  font-size: clamp(20pt, 2.2889842632vw - 8.5836909871px + 20pt, 40pt);
+  font-size: clamp(20pt, 3.0828516378vw - 11.5606936416px + 20pt, 40pt);
 }
 
 h3 {
-  font-size: clamp(20pt, 1.1444921316vw - 4.2918454936px + 20pt, 30pt);
+  font-size: clamp(20pt, 1.5414258189vw - 5.7803468208px + 20pt, 30pt);
 }
 
 h4 {
-  font-size: clamp(15pt, 0.5722460658vw - 2.1459227468px + 15pt, 20pt);
+  font-size: clamp(15pt, 0.7707129094vw - 2.8901734104px + 15pt, 20pt);
 }
 
 h5 {
-  font-size: clamp(12pt, 0.3433476395vw - 1.2875536481px + 12pt, 15pt);
+  font-size: clamp(12pt, 0.4624277457vw - 1.7341040462px + 12pt, 15pt);
 }
 
 body {
@@ -183,8 +193,7 @@ form button {
   }
 }
 .body {
-  padding-left: 10%;
-  padding-right: 10%;
+  margin: 0 max(40px, (100% - 1200px) / 2) 0 max(40px, (100% - 1200px) / 2);
 }
 
 p {

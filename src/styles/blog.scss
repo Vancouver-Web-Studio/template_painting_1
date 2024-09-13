@@ -1,15 +1,14 @@
+@import "core.scss";
 @import "base.scss";
 @import "slideshow.scss";
 .body {
-    padding-left: 10%;
-    padding-right: 10%;
-
+  @include responsive-lr-margin($width, $min-margin);
 }
 
 p {
-    margin-bottom: 2ch;
+  margin-bottom: 2ch;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }

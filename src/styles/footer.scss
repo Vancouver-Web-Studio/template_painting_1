@@ -23,6 +23,16 @@ footer {
       }
     }
   }
+  .footer-social-media-icons {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+  }
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
   .footer-quick-links {
     a {
         text-decoration: none;

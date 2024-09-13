@@ -3,14 +3,14 @@
 @import "variables.scss";
 
 $min-width: 375px;
-$width: 1500px;
+$width: 1200px;
 $min-margin: 40px;
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-size: min(15pt, 3vw);
 }
 h1,
@@ -19,10 +19,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 400;
+  font-weight: 900;
 }
 h1 {
-  @include linear-font-size-clamp(375px, $width + $min_margin, 30pt, 50pt);
+  @include linear-font-size-clamp(375px, $width + $min_margin, 20pt, 50pt);
 }
 h2 {
   @include linear-font-size-clamp(375px, $width + $min_margin, 20pt, 40pt);

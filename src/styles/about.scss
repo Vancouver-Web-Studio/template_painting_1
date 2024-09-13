@@ -1,16 +1,14 @@
+@import "core.scss";
 @import "base.scss";
 
 .body {
-    display: flex;
-    flex-direction: row;
-    column-gap: 2rem;
+    @include left-profile(45ch, 2rem);
     .body-left {
-        max-width: 50%;
-        min-width: 40%;
+
         img {
-            display: block;
             width: 100%;
-            border: 10px solid white;
+            max-width: 500px;
+            border-radius: 20px;
             box-shadow: 0 0 10px lightgrey;
 
         }
@@ -18,24 +16,7 @@
     .body-right {
         display: flex;
         flex-direction: column;
-        .body-content {
-            flex-grow: 1;
-        }
+        row-gap: 1rem;
     }
 }
 
-@media (max-width: 1650px) {
-    .body {
-        flex-direction: column;
-        align-items: center;
-        row-gap: 2rem;
-
-        .body-left {
-            max-width: none;
-            min-width: none;
-
-        }
-
-    }
-    
-}

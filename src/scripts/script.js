@@ -23,5 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
     animatedElements.forEach((elem) => observer.observe(elem));
 
+    document.addEventListener("touchstart", function() {}, true);
+
   });
   
